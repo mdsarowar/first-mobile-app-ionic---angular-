@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="/place/tabs/discover" ></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ isLoading? 'Loading....': loadPlace.title}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div text-center *ngIf="isLoading" >
+    <ion-spinner name="" color="primary"></ion-spinner>
+
+  </div>
+  <ion-grid no-padding *ngIf="!isLoading" >
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3" no-padding>
+        <ion-img [src]="loadPlace.imgUrl"></ion-img>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3" no-padding>
+       <ion-item> {{loadPlace.title}} </ion-item>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3" no-padding>
+       <ion-item> {{loadPlace.description}} </ion-item>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-card>
+    <img alt="Silhouette of mountains" src="{{loadPlace.imgUrl}} " />
+    <ion-card-header>
+      <ion-card-title>{{loadPlace.title}}</ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+     {{loadPlace.description}}
+    </ion-card-content>
+  </ion-card> -->
+
+  <ion-button color="primary" margin (click)="onBookPlace()" >Book</ion-button>
+
+</ion-content>

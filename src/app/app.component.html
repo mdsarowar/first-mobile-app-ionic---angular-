@@ -1,3 +1,80 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+ <!-- <ion-menu side="start" menuId="m1" >
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>something</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+
+  </ion-content>
+ </ion-menu> -->
+
+
+ <ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-menu-toggle>
+    <ion-list>
+      <ion-item lines="none" routerLink="/place/tabs/discover">
+        <ion-icon name="business" slot="start"></ion-icon>
+        <ion-label>Discover Place</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-menu-toggle>
+   <ion-menu-toggle>
+    <ion-list>
+      <ion-item lines="none" routerLink="/bookings">
+        <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+        <ion-label>Your Booking</ion-label>
+      </ion-item>
+    </ion-list>
+   </ion-menu-toggle>
+   <ion-menu-toggle>
+    <ion-list>
+      <ion-item lines="none" (click)="onlogutbtn()">
+        <ion-icon name="exit" slot="start"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-item>
+    </ion-list>
+   </ion-menu-toggle>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <!-- <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="business" slot="start"></ion-icon>
+        <ion-label>Discover Place</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+        <ion-label>Your Booking</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="exit" slot="start"></ion-icon>
+        <ion-label>Logout</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content> -->
+</div>
+
+  <ion-router-outlet main ></ion-router-outlet>
 </ion-app>
